@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prompt-Bold.ttf">
+            <string>Prompt-Bold</string>
+        </array>
+        <array key="Prompt-Regular.ttf">
+            <string>Prompt-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="CGd-Vq-CHv" customClass="EditViewCell" customModule="TimeZone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="CGd-Vq-CHv" id="TZR-Lo-80d">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TSb-CO-xFU">
+                        <rect key="frame" x="16" y="11" width="343" height="26"/>
+                        <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="frb-kA-qCz">
+                        <rect key="frame" x="16" y="37" width="343" height="50"/>
+                        <fontDescription key="fontDescription" name="Prompt-Bold" family="Prompt" pointSize="33"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="frb-kA-qCz" firstAttribute="leading" secondItem="TZR-Lo-80d" secondAttribute="leading" constant="16" id="5m9-Io-Isn"/>
+                    <constraint firstItem="TSb-CO-xFU" firstAttribute="top" secondItem="TZR-Lo-80d" secondAttribute="top" constant="11" id="6e6-dH-BPC"/>
+                    <constraint firstItem="frb-kA-qCz" firstAttribute="top" secondItem="TSb-CO-xFU" secondAttribute="bottom" id="Csd-Zm-bSR"/>
+                    <constraint firstItem="TSb-CO-xFU" firstAttribute="leading" secondItem="TZR-Lo-80d" secondAttribute="leading" constant="16" id="LL2-15-qwj"/>
+                    <constraint firstAttribute="trailing" secondItem="TSb-CO-xFU" secondAttribute="trailing" constant="16" id="N1F-bx-6KQ"/>
+                    <constraint firstAttribute="trailing" secondItem="frb-kA-qCz" secondAttribute="trailing" constant="16" id="TuT-mF-vNY"/>
+                </constraints>
+            </tableViewCellContentView>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="gmtLabel" destination="TSb-CO-xFU" id="0Vk-KC-Vxq"/>
+                <outlet property="locationLabel" destination="frb-kA-qCz" id="70y-iU-269"/>
+            </connections>
+            <point key="canvasLocation" x="308" y="-23.388305847076463"/>
+        </tableViewCell>
+    </objects>
+</document>

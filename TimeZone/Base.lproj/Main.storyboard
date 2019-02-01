@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="9Ga-XA-NUy">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="0U5-Vw-dkT">
+            <objects>
+                <navigationController id="9Ga-XA-NUy" sceneMemberID="viewController">
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ddk-6G-Hrs">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="d1b-rQ-83a"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ezg-Wk-Vbv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1324" y="183"/>
+        </scene>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="TimeZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.25" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="sVS-sJ-Msx">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </imageView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" contentInsetAdjustmentBehavior="scrollableAxes" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Kzo-Xa-VQu">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="0.0" minimumInteritemSpacing="10" id="dGv-LD-jqo">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="poG-ax-kdl"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="hu1-NV-ee6"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Kzo-Xa-VQu" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="0KV-Ed-9MQ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sVS-sJ-Msx" secondAttribute="bottom" id="E5D-VD-4Jr"/>
+                            <constraint firstItem="sVS-sJ-Msx" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="OOF-Rn-JwY"/>
+                            <constraint firstItem="Kzo-Xa-VQu" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XRf-2b-fRw"/>
+                            <constraint firstItem="sVS-sJ-Msx" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="aH4-5y-gHu"/>
+                            <constraint firstItem="Kzo-Xa-VQu" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="g5R-OQ-NvQ"/>
+                            <constraint firstItem="Kzo-Xa-VQu" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="ky8-gg-XHx"/>
+                            <constraint firstItem="sVS-sJ-Msx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="pg0-0t-68V"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="6E9-Hn-vC7">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="8lD-Kd-kqc">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="onTapEditButton" destination="BYZ-38-t0r" id="DTL-JH-uBg"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="collectionView" destination="Kzo-Xa-VQu" id="fus-X7-rWh"/>
+                        <outlet property="globeBackgroundImageView" destination="sVS-sJ-Msx" id="lhh-4J-7UE"/>
+                        <segue destination="bhT-1h-Twj" kind="show" identifier="EditSegue" id="amE-ge-UvE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-218" y="156"/>
+        </scene>
+        <!--Edit View Controller-->
+        <scene sceneID="5UE-gA-h6r">
+            <objects>
+                <viewController id="bhT-1h-Twj" customClass="EditViewController" customModule="TimeZone" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="S3e-Kg-vwB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="8ww-mt-Jph">
+                                <rect key="frame" x="0.0" y="120" width="375" height="547"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="bhT-1h-Twj" id="8j2-IF-aNh"/>
+                                    <outlet property="delegate" destination="bhT-1h-Twj" id="vcR-ip-KYe"/>
+                                </connections>
+                            </tableView>
+                            <searchBar contentMode="redraw" placeholder="Search for City" translatesAutoresizingMaskIntoConstraints="NO" id="UNa-M1-hTQ">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="p5V-3r-BXf"/>
+                                </constraints>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bhT-1h-Twj" id="UJx-oD-izR"/>
+                                </connections>
+                            </searchBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="UNa-M1-hTQ" firstAttribute="leading" secondItem="Kcp-8a-W5h" secondAttribute="leading" id="4es-HF-m3v"/>
+                            <constraint firstItem="8ww-mt-Jph" firstAttribute="bottom" secondItem="Kcp-8a-W5h" secondAttribute="bottom" id="NkK-Z3-Tcf"/>
+                            <constraint firstItem="8ww-mt-Jph" firstAttribute="leading" secondItem="Kcp-8a-W5h" secondAttribute="leading" id="TOV-ho-mcf"/>
+                            <constraint firstItem="8ww-mt-Jph" firstAttribute="trailing" secondItem="Kcp-8a-W5h" secondAttribute="trailing" id="gXr-ox-aHf"/>
+                            <constraint firstItem="UNa-M1-hTQ" firstAttribute="trailing" secondItem="Kcp-8a-W5h" secondAttribute="trailing" id="jym-gy-k4W"/>
+                            <constraint firstItem="UNa-M1-hTQ" firstAttribute="top" secondItem="Kcp-8a-W5h" secondAttribute="top" id="rWT-HQ-lxO"/>
+                            <constraint firstItem="8ww-mt-Jph" firstAttribute="top" secondItem="UNa-M1-hTQ" secondAttribute="bottom" id="sXS-Mw-4OV"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kcp-8a-W5h"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="UNa-M1-hTQ" id="ME9-Zs-ncP"/>
+                        <outlet property="tableView" destination="8ww-mt-Jph" id="s76-lu-Xxf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Not-yS-K9z" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="648.79999999999995" y="22.938530734632685"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="581" height="827"/>
+    </resources>
+    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+</document>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Prompt-Regular.ttf">
+            <string>Prompt-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TimeCell" customModule="TimeZone" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="50" height="80"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="12" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xdb-No-4TP">
+                        <rect key="frame" x="7.5" y="5" width="35" height="43"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="LZk-2d-JQQ"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="37"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PM" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xnL-cV-AJ0">
+                        <rect key="frame" x="13" y="50" width="24.5" height="26"/>
+                        <fontDescription key="fontDescription" name="Prompt-Regular" family="Prompt" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <color key="backgroundColor" white="1" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="xnL-cV-AJ0" firstAttribute="top" secondItem="Xdb-No-4TP" secondAttribute="bottom" constant="2" id="3jb-1Z-bNa"/>
+                <constraint firstItem="Xdb-No-4TP" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="EfF-6s-yEd"/>
+                <constraint firstItem="Xdb-No-4TP" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" constant="5" id="S4c-Eu-ZHd"/>
+                <constraint firstItem="xnL-cV-AJ0" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="ag3-x6-bgN"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="amPmLabel" destination="xnL-cV-AJ0" id="uq5-CU-l0C"/>
+                <outlet property="timeLabel" destination="Xdb-No-4TP" id="jbb-qi-yeH"/>
+            </connections>
+            <point key="canvasLocation" x="132.80000000000001" y="154.72263868065968"/>
+        </collectionViewCell>
+    </objects>
+</document>
